@@ -9,7 +9,7 @@ def extractPdf (type, dataBlocks, startIndex, runId):
 		i = i+1;
 		fileName = "result_" + type + "_" + str(runId) + "_" + str(i) +".pdf";
 		print("Decoding to: " + fileName);
-		f = open(fileName, 'w');
+		f = open(fileName, 'wb');
 		decoded = base64.b64decode(dataBlock)
 		f.write(decoded)
 	return i - startIndex;
